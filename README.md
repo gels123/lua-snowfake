@@ -1,10 +1,8 @@
-﻿#  ❄ idgenerator-C
+﻿#  ❄ lua版本雪花算法，高效生成唯一id
 
 ## 编译说明
 
-1.默认是 Linux 环境，用 CMake。
-
-2.如果是 Windows 环境，要用 Cygwin 或 MinGW。
+1.默认是 Linux 环境，用 make linux。
 
 
 ## 调用示例（C）
@@ -26,4 +24,7 @@ SetIdGenerator(options);
 // 初始化以后，即可在任何需要生成ID的地方，调用以下方法：
 long newId = NextId();
 ```
+## 调用示例（lua）
+local snowflake  = require("snowflake")
+print(snowflake.nextid())
 
